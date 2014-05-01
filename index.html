@@ -1,96 +1,50 @@
-<!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Calc : " />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Calc</title>
+<!doctype html>
+<html><head>
+    <title>calculater</title> 	
+	<link rel="stylesheet" href="style.css" type="text/css">    
+    <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
+	<meta charset="utf-8">
   </head>
-
   <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Professura18/calc">View on GitHub</a>
-
-          <h1 id="project_title">Calc</h1>
-          <h2 id="project_tagline"></h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/Professura18/calc/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/Professura18/calc/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p>&lt;!doctype html&gt;
-</p>
-    calculater<br><br><div align="center">
-<br><table cellspacing="0">
-<tr>
-<td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+  <div id="div_calc" class="divCalc" align="center">     
+      <input id="inpCalc" class="calcInput" type="text" size="30" value="0"></input>
+  	<table cellspacing="0">
+    	<tr>
+        	<td><input id="num1" class="calcNum" type="button" value="1" onClick="clickNum(event)"></input></td>
+        	<td><input id="num2" class="calcNum" type="button" value="2" onClick="clickNum(event)"></input></td>
+        	<td><input id="num3" class="calcNum" type="button" value="3" onClick="clickNum(event)"></input></td>
+        	<td><input id="backSpace" class="calcNum" type="button" value="←" onClick="clickBackSpace(event)"></input></td>
         </tr>
-<tr>
-<td></td>
-            <td></td>
-            <td></td>
-            <td></td>            
+    	<tr>
+        	<td><input id="num4" class="calcNum" type="button" value="4" onClick="clickNum(event)"></input></td>
+        	<td><input id="num5" class="calcNum" type="button" value="5" onClick="clickNum(event)"></input></td>
+        	<td><input id="num6" class="calcNum" type="button" value="6" onClick="clickNum(event)"></input></td>
+        	<td><input id="clear" class="calcNum" type="button" value="С" onClick="clearField(event)"></input></td>            
+                       
+        </tr>
+        
+    	<tr>
+        	<td><input id="num7" class="calcNum" type="button" value="7" onClick="clickNum(event)"></input></td>
+        	<td><input id="num8" class="calcNum" type="button" value="8" onClick="clickNum(event)"></input></td>
+        	<td><input id="num9" class="calcNum" type="button" value="9" onClick="clickNum(event)"></input></td>
+        	<td><input id="divide" class="calcNum" type="button" value="/" onClick="clickOperator(event)"></input></td>                      
+        </tr>        
 
-<pre><code>    &lt;/tr&gt;
-
-    &lt;tr&gt;
-        &lt;td&gt;&lt;input id="num7" class="calcNum" type="button" value="7" onClick="clickNum(event)"&gt;&lt;/input&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;input id="num8" class="calcNum" type="button" value="8" onClick="clickNum(event)"&gt;&lt;/input&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;input id="num9" class="calcNum" type="button" value="9" onClick="clickNum(event)"&gt;&lt;/input&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;input id="divide" class="calcNum" type="button" value="/" onClick="clickOperator(event)"&gt;&lt;/input&gt;&lt;/td&gt;                      
-    &lt;/tr&gt;        
-
-    &lt;tr&gt;
-        &lt;td&gt;&lt;input id="num0" class="calcNum" type="button" value="0" onClick="clickNum(event)"&gt;&lt;/input&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;input id="plus" class="calcNum" type="button" value="+" onClick="clickOperator(event)"&gt;&lt;/input&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;input id="minus" class="calcNum" type="button" value="-" onClick="clickOperator(event)"&gt;&lt;/input&gt;&lt;/td&gt;            
-        &lt;td&gt;&lt;input id="mult" class="calcNum" type="button" value="*" onClick="clickOperator(event)"&gt;&lt;/input&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-
-    &lt;tr&gt;
-        &lt;td&gt;&lt;input id="result" class="calcNum" type="button" value="=" onClick="toResult(event)"&gt;&lt;/input&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;input id="dot" class="calcNum" type="button" value="." onClick="clickDot(event)"&gt;&lt;/input&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;input id="backSpace" class="calcNum" type="button" value="1/x" onClick="clickOperator(event)"&gt;&lt;/input&gt;&lt;/td&gt;            
-        &lt;td&gt;&lt;input id="backSpace" class="calcNum" type="button" value="√x" onClick="clickOperator(event)"&gt;&lt;/input&gt;&lt;/td&gt;                        
-    &lt;/tr&gt;                        
-&lt;/table&gt;    
-&lt;/div&gt;
-&lt;script src="calc.js"&gt;&lt;/script&gt;       
-</code></pre>
-
-<p> 
-</p>
-</tr>
-</table>
-</div>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Calc maintained by <a href="https://github.com/Professura18">Professura18</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+    	<tr>
+        	<td><input id="num0" class="calcNum" type="button" value="0" onClick="clickNum(event)"></input></td>
+        	<td><input id="plus" class="calcNum" type="button" value="+" onClick="clickOperator(event)"></input></td>
+        	<td><input id="minus" class="calcNum" type="button" value="-" onClick="clickOperator(event)"></input></td>            
+        	<td><input id="mult" class="calcNum" type="button" value="*" onClick="clickOperator(event)"></input></td>
+        </tr>
+        
+        <tr>
+        	<td><input id="result" class="calcNum" type="button" value="=" onClick="toResult(event)"></input></td>
+        	<td><input id="dot" class="calcNum" type="button" value="." onClick="clickDot(event)"></input></td>
+        	<td><input id="backSpace" class="calcNum" type="button" value="1/x" onClick="clickOperator(event)"></input></td>            
+        	<td><input id="backSpace" class="calcNum" type="button" value="√x" onClick="clickOperator(event)"></input></td>                        
+        </tr>                        
+    </table>	
+	</div>
+    <script src="calc.js"></script>       
+  </body> 
 </html>
